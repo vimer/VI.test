@@ -1,10 +1,19 @@
-var gulp = require("gulp")
-	less = require("gulp-less")
+var gulp = require('gulp');
+var jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
 
-gulp.task("testLess", function() {
-	gulp.src("src/less/index.less")
-	.pipe(less())
-	.pipe(gulp.dest("src/css"))
+var paths = {
+  scripts: 'js/**/*.js',
+};
+
+gulp.task('lint', function() {
+	return gulp.src(paths.scripts)
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'));
 });
 
-gulp.task("default", ["testLess", "elseTask"])
+gulp.task('minify', function () {
+	gulp.src('js/*.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('build'))
+});

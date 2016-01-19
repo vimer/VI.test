@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html ng-app="scope">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="./scripts/angular.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<!--测试controller的作用域-->
+		<div ng-controller="test_1 as t1">
+			<button ng-click="t1.setCount()">{{t1.count}}</button>
+			<div ng-controller="test_2 as t2">
+				<button ng-click="t2.setCount()">{{t2.count}}</button>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	var app = angular.module("scope", []);
+	app.controller("test_1", function(){
+		var me = this;
+		this.setCount = function() {
+			me.count = 1;
+		}
+	})
+	
+	app.controller("test_2", function(){
+		var me = this;
+		this.setCount = function() {
+			me.count = 2;
+		}
+	})
+</script>

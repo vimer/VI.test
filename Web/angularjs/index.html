@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html ng-app="HomeModule">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="./angular.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body ng-controller="HomeController">
+		<h1>{{pageHeading | titleCase}}</h1>
+	</body>
+</html>
+<script>
+	function HomeController($scope) {
+		$scope.pageHeading = "hello world"
+	}
+	var homeModule = angular.module("HomeModule", []);
+	//创建过滤器
+	homeModule.filter("titleCase", function() {
+		var titleCaseFilter = function(input) {
+			var words = input.split(" ");
+			for (var i=0; i<words.length; i++) {
+				words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+			}
+			return words.join(" ");
+		}
+		return titleCaseFilter;
+	})
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html ng-app="">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="./angular.min.js"></script>
+		<style>
+			.menu-disabled-true {
+				color: red;
+			}
+			.error {
+				background-color:red;
+			}
+			.warning {
+				background-color:yellow;
+			}
+			.selected {
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-controller="DeathrayMenuController">
+			<ul>
+				<li class="menu-disabled-{{isDisabled}}" ng-click="stun()">点击我</li>
+			</ul>
+		</div>
+		<hr>
+		<div ng-controller="HeaderController">
+			<div ng-class='{error: isError, warning: isWarning}' ng-bind='messageText'></div>
+			<button ng-click='showError()'>Show Error</button>
+			<button ng-click='showWarning()'>Show Warning</button>
+		</div>
+		<hr>
+		<table ng-controller="RestaurantTableController">
+			<tr ng-repeat="restaurant in directory" ng-click='selectRestaurant($index)' ng-class="{selected:$index==selectedRow}">
+				<td>{{restaurant.name}}</td>
+				<td>{{restaurant.cuisine}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script>
+	function DeathrayMenuController($scope) {
+		$scope.isDisabled = false;
+		$scope.stun = function() {
+			$scope.isDisabled = true;
+		};
+	}
+
+	function HeaderController($scope) {
+		$scope.isError = false;
+		$scope.isWarning = false;
+		$scope.messageText = "default message"
+
+		$scope.showError = function() {
+			$scope.messageText = "This is an error!";
+			$scope.isError = true;
+			$scope.isWarning = false;
+		}
+
+		$scope.showWarning = function() {
+			$scope.messageText = "Just a warning"
+			$scope.isWarning = true;
+			$scope.isError = false;
+		}
+	}
+
+	function RestaurantTableController($scope) {
+		$scope.directory = [
+			{name:'The Handsome Heifer', cuisine:'BBQ'},
+			{name:'....XXX', cuisine:'Salads'},
+			{name:'XXX...', cuisine:"Seafood"}
+		]
+		$scope.selectRestaurant = function(row) {
+			$scope.selectedRow = row;
+		}
+	}
+</script>

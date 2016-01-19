@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html ng-app="">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="./angular.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div ng-controller="CartController">
+			<div>Total:{{totalCart()}}</div>
+			<div>Discount: {{bill.discount}}</div>
+			<div>Subtotal: {{subtotal()}}</div>
+		</div>
+		<hr>
+		<div ng-controller="CartController_2">
+			<div>Total: {{bill.total}}</div>
+			<div>Discount: {{bill.discount}}</div>
+			<div>Subtotal: {{bill.subtotal}}</div>
+		</div>
+	</body>
+</html>
+<script>
+	function CartController($scope) {
+		$scope.bill = {};
+		$scope.items = [
+			{title: 'Paint pots', quantity: 8, price: 3.95},
+			{title: 'Polka dots', quantity: 17, price: 12.95},
+			{title: 'Pebbles', quantity: 5, price: 6.95}
+		];
+		$scope.totalCart = function() {
+			var total = 0;
+			for (var i=0, len=$scope.items.length; i<len; i++) {
+				total = total + $scope.items[i].price * $scope.items[i].quantity;
+			}
+			return total;
+		}
+		$scope.subtotal = function() {
+			return $scope.totalCart() - $scope.bill.discount;
+		}
+		function calculateDiscount(newValue, oldValue, scope) {
+			$scope.bill.discount = newValue > 100 ? 10 : 0;
+		}
+		$scope.$watch($scope.totalCart, calculateDiscount);
+	}
+
+	function CartController_2($scope) {
+		$scope.bill = {};
+		$scope.items = [
+			{title: 'Paint pots', quantity: 8, price: 3.95},
+			{title: 'Polka dots', quantity: 17, price: 12.95},
+			{title: 'Pebbles', quantity: 5, price: 6.95}
+		];
+		var calculateTotals = function() {
+			var tatal = 0;
+			for (var i=0, len=$scope.items.length; i<len; i++) {
+				total = total + $scope.items[i].price * $scope.items[i].quantity;
+			}
+			$scope.bill.total = total;
+			$scope.bill.discount = total > 100 ? 10 : 0;
+			$scope.bill.subtotal = total - $scope.bill.discount;
+		}
+		$scope.$watch("items", calculateTotals, true);
+	}
+</script>

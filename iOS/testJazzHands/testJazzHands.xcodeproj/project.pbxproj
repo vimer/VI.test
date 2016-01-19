@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1542B151C34223B00029448 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B141C34223B00029448 /* main.m */; };
+		F1542B181C34223B00029448 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B171C34223B00029448 /* AppDelegate.m */; };
+		F1542B1B1C34223B00029448 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B1A1C34223B00029448 /* ViewController.m */; };
+		F1542B1E1C34223B00029448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1542B1C1C34223B00029448 /* Main.storyboard */; };
+		F1542B201C34223B00029448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1542B1F1C34223B00029448 /* Assets.xcassets */; };
+		F1542B231C34223C00029448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1542B211C34223C00029448 /* LaunchScreen.storyboard */; };
+		F1542B2E1C34223C00029448 /* testJazzHandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B2D1C34223C00029448 /* testJazzHandsTests.m */; };
+		F1542B391C34223C00029448 /* testJazzHandsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B381C34223C00029448 /* testJazzHandsUITests.m */; };
+		F1542B811C34225100029448 /* IFTTTAlphaAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B481C34225100029448 /* IFTTTAlphaAnimation.m */; };
+		F1542B821C34225100029448 /* IFTTTAnimatedPagingScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B4B1C34225100029448 /* IFTTTAnimatedPagingScrollViewController.m */; };
+		F1542B831C34225100029448 /* IFTTTAnimatedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B4D1C34225100029448 /* IFTTTAnimatedScrollViewController.m */; };
+		F1542B841C34225100029448 /* IFTTTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B4F1C34225100029448 /* IFTTTAnimation.m */; };
+		F1542B851C34225100029448 /* IFTTTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B511C34225100029448 /* IFTTTAnimator.m */; };
+		F1542B861C34225100029448 /* IFTTTBackgroundColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B531C34225100029448 /* IFTTTBackgroundColorAnimation.m */; };
+		F1542B871C34225100029448 /* IFTTTConstraintConstantAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B551C34225100029448 /* IFTTTConstraintConstantAnimation.m */; };
+		F1542B881C34225100029448 /* IFTTTConstraintMultiplierAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B571C34225100029448 /* IFTTTConstraintMultiplierAnimation.m */; };
+		F1542B891C34225100029448 /* IFTTTCornerRadiusAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B591C34225100029448 /* IFTTTCornerRadiusAnimation.m */; };
+		F1542B8A1C34225100029448 /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B5B1C34225100029448 /* IFTTTEasingFunction.m */; };
+		F1542B8B1C34225100029448 /* IFTTTFilmstrip.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B5D1C34225100029448 /* IFTTTFilmstrip.m */; };
+		F1542B8C1C34225100029448 /* IFTTTFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B5F1C34225100029448 /* IFTTTFrameAnimation.m */; };
+		F1542B8D1C34225100029448 /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B611C34225100029448 /* IFTTTHideAnimation.m */; };
+		F1542B8E1C34225100029448 /* IFTTTInterpolatable.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B631C34225100029448 /* IFTTTInterpolatable.m */; };
+		F1542B8F1C34225100029448 /* IFTTTLayerFillColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B661C34225100029448 /* IFTTTLayerFillColorAnimation.m */; };
+		F1542B901C34225100029448 /* IFTTTLayerStrokeEndAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B681C34225100029448 /* IFTTTLayerStrokeEndAnimation.m */; };
+		F1542B911C34225100029448 /* IFTTTLayerStrokeStartAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B6A1C34225100029448 /* IFTTTLayerStrokeStartAnimation.m */; };
+		F1542B921C34225100029448 /* IFTTTMaskAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B6C1C34225100029448 /* IFTTTMaskAnimation.m */; };
+		F1542B931C34225100029448 /* IFTTTPathPositionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B6E1C34225100029448 /* IFTTTPathPositionAnimation.m */; };
+		F1542B941C34225100029448 /* IFTTTRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B701C34225100029448 /* IFTTTRotationAnimation.m */; };
+		F1542B951C34225100029448 /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B721C34225100029448 /* IFTTTScaleAnimation.m */; };
+		F1542B961C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B741C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.m */; };
+		F1542B971C34225100029448 /* IFTTTShapeLayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B761C34225100029448 /* IFTTTShapeLayerAnimation.m */; };
+		F1542B981C34225100029448 /* IFTTTTextColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B781C34225100029448 /* IFTTTTextColorAnimation.m */; };
+		F1542B991C34225100029448 /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B7A1C34225100029448 /* IFTTTTransform3DAnimation.m */; };
+		F1542B9A1C34225100029448 /* IFTTTTranslationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B7C1C34225100029448 /* IFTTTTranslationAnimation.m */; };
+		F1542B9B1C34225100029448 /* IFTTTViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B7E1C34225100029448 /* IFTTTViewAnimation.m */; };
+		F1542B9C1C34225100029448 /* UIView+IFTTTJazzHands.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542B801C34225100029448 /* UIView+IFTTTJazzHands.m */; };
+		F1542BC21C34227F00029448 /* ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BA01C34227F00029448 /* ADFlipTransition.m */; };
+		F1542BC31C34227F00029448 /* UICollectionViewController+ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BA21C34227F00029448 /* UICollectionViewController+ADFlipTransition.m */; };
+		F1542BC41C34227F00029448 /* UITableViewController+ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BA41C34227F00029448 /* UITableViewController+ADFlipTransition.m */; };
+		F1542BC51C34227F00029448 /* UIView+CaptureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BA61C34227F00029448 /* UIView+CaptureImage.m */; };
+		F1542BC61C34227F00029448 /* UIViewController+ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BA81C34227F00029448 /* UIViewController+ADFlipTransition.m */; };
+		F1542BC71C34227F00029448 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BAA1C34227F00029448 /* MASCompositeConstraint.m */; };
+		F1542BC81C34227F00029448 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BAD1C34227F00029448 /* MASConstraint.m */; };
+		F1542BC91C34227F00029448 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BAF1C34227F00029448 /* MASConstraintMaker.m */; };
+		F1542BCA1C34227F00029448 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BB11C34227F00029448 /* MASLayoutConstraint.m */; };
+		F1542BCB1C34227F00029448 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BB51C34227F00029448 /* MASViewAttribute.m */; };
+		F1542BCC1C34227F00029448 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BB71C34227F00029448 /* MASViewConstraint.m */; };
+		F1542BCD1C34227F00029448 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BB91C34227F00029448 /* NSArray+MASAdditions.m */; };
+		F1542BCE1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BBC1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		F1542BCF1C34227F00029448 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BBE1C34227F00029448 /* View+MASAdditions.m */; };
+		F1542BD01C34227F00029448 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BC11C34227F00029448 /* ViewController+MASAdditions.m */; };
+		F1542BD31C3422C100029448 /* IFTTTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BD21C3422C100029448 /* IFTTTCircleView.m */; };
+		F1542BD61C3423E800029448 /* IFTTTJazzHandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1542BD51C3423E800029448 /* IFTTTJazzHandsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1542B2A1C34223C00029448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1542B081C34223B00029448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1542B0F1C34223B00029448;
+			remoteInfo = testJazzHands;
+		};
+		F1542B351C34223C00029448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1542B081C34223B00029448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1542B0F1C34223B00029448;
+			remoteInfo = testJazzHands;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F1542B101C34223B00029448 /* testJazzHands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testJazzHands.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1542B141C34223B00029448 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1542B161C34223B00029448 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1542B171C34223B00029448 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1542B191C34223B00029448 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F1542B1A1C34223B00029448 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F1542B1D1C34223B00029448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1542B1F1C34223B00029448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1542B221C34223C00029448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1542B241C34223C00029448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1542B291C34223C00029448 /* testJazzHandsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJazzHandsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1542B2D1C34223C00029448 /* testJazzHandsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testJazzHandsTests.m; sourceTree = "<group>"; };
+		F1542B2F1C34223C00029448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1542B341C34223C00029448 /* testJazzHandsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJazzHandsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1542B381C34223C00029448 /* testJazzHandsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testJazzHandsUITests.m; sourceTree = "<group>"; };
+		F1542B3A1C34223C00029448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1542B471C34225100029448 /* IFTTTAlphaAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAlphaAnimation.h; sourceTree = "<group>"; };
+		F1542B481C34225100029448 /* IFTTTAlphaAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAlphaAnimation.m; sourceTree = "<group>"; };
+		F1542B491C34225100029448 /* IFTTTAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAnimatable.h; sourceTree = "<group>"; };
+		F1542B4A1C34225100029448 /* IFTTTAnimatedPagingScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAnimatedPagingScrollViewController.h; sourceTree = "<group>"; };
+		F1542B4B1C34225100029448 /* IFTTTAnimatedPagingScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAnimatedPagingScrollViewController.m; sourceTree = "<group>"; };
+		F1542B4C1C34225100029448 /* IFTTTAnimatedScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAnimatedScrollViewController.h; sourceTree = "<group>"; };
+		F1542B4D1C34225100029448 /* IFTTTAnimatedScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAnimatedScrollViewController.m; sourceTree = "<group>"; };
+		F1542B4E1C34225100029448 /* IFTTTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAnimation.h; sourceTree = "<group>"; };
+		F1542B4F1C34225100029448 /* IFTTTAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAnimation.m; sourceTree = "<group>"; };
+		F1542B501C34225100029448 /* IFTTTAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAnimator.h; sourceTree = "<group>"; };
+		F1542B511C34225100029448 /* IFTTTAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAnimator.m; sourceTree = "<group>"; };
+		F1542B521C34225100029448 /* IFTTTBackgroundColorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTBackgroundColorAnimation.h; sourceTree = "<group>"; };
+		F1542B531C34225100029448 /* IFTTTBackgroundColorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTBackgroundColorAnimation.m; sourceTree = "<group>"; };
+		F1542B541C34225100029448 /* IFTTTConstraintConstantAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTConstraintConstantAnimation.h; sourceTree = "<group>"; };
+		F1542B551C34225100029448 /* IFTTTConstraintConstantAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTConstraintConstantAnimation.m; sourceTree = "<group>"; };
+		F1542B561C34225100029448 /* IFTTTConstraintMultiplierAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTConstraintMultiplierAnimation.h; sourceTree = "<group>"; };
+		F1542B571C34225100029448 /* IFTTTConstraintMultiplierAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTConstraintMultiplierAnimation.m; sourceTree = "<group>"; };
+		F1542B581C34225100029448 /* IFTTTCornerRadiusAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTCornerRadiusAnimation.h; sourceTree = "<group>"; };
+		F1542B591C34225100029448 /* IFTTTCornerRadiusAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTCornerRadiusAnimation.m; sourceTree = "<group>"; };
+		F1542B5A1C34225100029448 /* IFTTTEasingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTEasingFunction.h; sourceTree = "<group>"; };
+		F1542B5B1C34225100029448 /* IFTTTEasingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTEasingFunction.m; sourceTree = "<group>"; };
+		F1542B5C1C34225100029448 /* IFTTTFilmstrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTFilmstrip.h; sourceTree = "<group>"; };
+		F1542B5D1C34225100029448 /* IFTTTFilmstrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTFilmstrip.m; sourceTree = "<group>"; };
+		F1542B5E1C34225100029448 /* IFTTTFrameAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTFrameAnimation.h; sourceTree = "<group>"; };
+		F1542B5F1C34225100029448 /* IFTTTFrameAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTFrameAnimation.m; sourceTree = "<group>"; };
+		F1542B601C34225100029448 /* IFTTTHideAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTHideAnimation.h; sourceTree = "<group>"; };
+		F1542B611C34225100029448 /* IFTTTHideAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTHideAnimation.m; sourceTree = "<group>"; };
+		F1542B621C34225100029448 /* IFTTTInterpolatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTInterpolatable.h; sourceTree = "<group>"; };
+		F1542B631C34225100029448 /* IFTTTInterpolatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTInterpolatable.m; sourceTree = "<group>"; };
+		F1542B641C34225100029448 /* IFTTTJazzHands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHands.h; sourceTree = "<group>"; };
+		F1542B651C34225100029448 /* IFTTTLayerFillColorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTLayerFillColorAnimation.h; sourceTree = "<group>"; };
+		F1542B661C34225100029448 /* IFTTTLayerFillColorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTLayerFillColorAnimation.m; sourceTree = "<group>"; };
+		F1542B671C34225100029448 /* IFTTTLayerStrokeEndAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTLayerStrokeEndAnimation.h; sourceTree = "<group>"; };
+		F1542B681C34225100029448 /* IFTTTLayerStrokeEndAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTLayerStrokeEndAnimation.m; sourceTree = "<group>"; };
+		F1542B691C34225100029448 /* IFTTTLayerStrokeStartAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTLayerStrokeStartAnimation.h; sourceTree = "<group>"; };
+		F1542B6A1C34225100029448 /* IFTTTLayerStrokeStartAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTLayerStrokeStartAnimation.m; sourceTree = "<group>"; };
+		F1542B6B1C34225100029448 /* IFTTTMaskAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTMaskAnimation.h; sourceTree = "<group>"; };
+		F1542B6C1C34225100029448 /* IFTTTMaskAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTMaskAnimation.m; sourceTree = "<group>"; };
+		F1542B6D1C34225100029448 /* IFTTTPathPositionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTPathPositionAnimation.h; sourceTree = "<group>"; };
+		F1542B6E1C34225100029448 /* IFTTTPathPositionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTPathPositionAnimation.m; sourceTree = "<group>"; };
+		F1542B6F1C34225100029448 /* IFTTTRotationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTRotationAnimation.h; sourceTree = "<group>"; };
+		F1542B701C34225100029448 /* IFTTTRotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTRotationAnimation.m; sourceTree = "<group>"; };
+		F1542B711C34225100029448 /* IFTTTScaleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTScaleAnimation.h; sourceTree = "<group>"; };
+		F1542B721C34225100029448 /* IFTTTScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTScaleAnimation.m; sourceTree = "<group>"; };
+		F1542B731C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTScrollViewPageConstraintAnimation.h; sourceTree = "<group>"; };
+		F1542B741C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTScrollViewPageConstraintAnimation.m; sourceTree = "<group>"; };
+		F1542B751C34225100029448 /* IFTTTShapeLayerAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTShapeLayerAnimation.h; sourceTree = "<group>"; };
+		F1542B761C34225100029448 /* IFTTTShapeLayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTShapeLayerAnimation.m; sourceTree = "<group>"; };
+		F1542B771C34225100029448 /* IFTTTTextColorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTTextColorAnimation.h; sourceTree = "<group>"; };
+		F1542B781C34225100029448 /* IFTTTTextColorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTTextColorAnimation.m; sourceTree = "<group>"; };
+		F1542B791C34225100029448 /* IFTTTTransform3DAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTTransform3DAnimation.h; sourceTree = "<group>"; };
+		F1542B7A1C34225100029448 /* IFTTTTransform3DAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTTransform3DAnimation.m; sourceTree = "<group>"; };
+		F1542B7B1C34225100029448 /* IFTTTTranslationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTTranslationAnimation.h; sourceTree = "<group>"; };
+		F1542B7C1C34225100029448 /* IFTTTTranslationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTTranslationAnimation.m; sourceTree = "<group>"; };
+		F1542B7D1C34225100029448 /* IFTTTViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTViewAnimation.h; sourceTree = "<group>"; };
+		F1542B7E1C34225100029448 /* IFTTTViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTViewAnimation.m; sourceTree = "<group>"; };
+		F1542B7F1C34225100029448 /* UIView+IFTTTJazzHands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IFTTTJazzHands.h"; sourceTree = "<group>"; };
+		F1542B801C34225100029448 /* UIView+IFTTTJazzHands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IFTTTJazzHands.m"; sourceTree = "<group>"; };
+		F1542B9F1C34227F00029448 /* ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFlipTransition.h; sourceTree = "<group>"; };
+		F1542BA01C34227F00029448 /* ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFlipTransition.m; sourceTree = "<group>"; };
+		F1542BA11C34227F00029448 /* UICollectionViewController+ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewController+ADFlipTransition.h"; sourceTree = "<group>"; };
+		F1542BA21C34227F00029448 /* UICollectionViewController+ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewController+ADFlipTransition.m"; sourceTree = "<group>"; };
+		F1542BA31C34227F00029448 /* UITableViewController+ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+ADFlipTransition.h"; sourceTree = "<group>"; };
+		F1542BA41C34227F00029448 /* UITableViewController+ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+ADFlipTransition.m"; sourceTree = "<group>"; };
+		F1542BA51C34227F00029448 /* UIView+CaptureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CaptureImage.h"; sourceTree = "<group>"; };
+		F1542BA61C34227F00029448 /* UIView+CaptureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CaptureImage.m"; sourceTree = "<group>"; };
+		F1542BA71C34227F00029448 /* UIViewController+ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ADFlipTransition.h"; sourceTree = "<group>"; };
+		F1542BA81C34227F00029448 /* UIViewController+ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ADFlipTransition.m"; sourceTree = "<group>"; };
+		F1542BA91C34227F00029448 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		F1542BAA1C34227F00029448 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		F1542BAB1C34227F00029448 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		F1542BAC1C34227F00029448 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		F1542BAD1C34227F00029448 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		F1542BAE1C34227F00029448 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		F1542BAF1C34227F00029448 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		F1542BB01C34227F00029448 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		F1542BB11C34227F00029448 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		F1542BB21C34227F00029448 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		F1542BB31C34227F00029448 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		F1542BB41C34227F00029448 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		F1542BB51C34227F00029448 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		F1542BB61C34227F00029448 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		F1542BB71C34227F00029448 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		F1542BB81C34227F00029448 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		F1542BB91C34227F00029448 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		F1542BBA1C34227F00029448 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		F1542BBB1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		F1542BBC1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		F1542BBD1C34227F00029448 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		F1542BBE1C34227F00029448 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		F1542BBF1C34227F00029448 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		F1542BC01C34227F00029448 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		F1542BC11C34227F00029448 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		F1542BD11C3422C100029448 /* IFTTTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTCircleView.h; sourceTree = "<group>"; };
+		F1542BD21C3422C100029448 /* IFTTTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTCircleView.m; sourceTree = "<group>"; };
+		F1542BD41C3423E800029448 /* IFTTTJazzHandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHandsViewController.h; sourceTree = "<group>"; };
+		F1542BD51C3423E800029448 /* IFTTTJazzHandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTJazzHandsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1542B0D1C34223B00029448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B261C34223C00029448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B311C34223C00029448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1542B071C34223B00029448 = {
+			isa = PBXGroup;
+			children = (
+				F1542B121C34223B00029448 /* testJazzHands */,
+				F1542B2C1C34223C00029448 /* testJazzHandsTests */,
+				F1542B371C34223C00029448 /* testJazzHandsUITests */,
+				F1542B111C34223B00029448 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1542B111C34223B00029448 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B101C34223B00029448 /* testJazzHands.app */,
+				F1542B291C34223C00029448 /* testJazzHandsTests.xctest */,
+				F1542B341C34223C00029448 /* testJazzHandsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1542B121C34223B00029448 /* testJazzHands */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B9D1C34227F00029448 /* Masonry */,
+				F1542B461C34225100029448 /* JazzHands */,
+				F1542B161C34223B00029448 /* AppDelegate.h */,
+				F1542B171C34223B00029448 /* AppDelegate.m */,
+				F1542BD41C3423E800029448 /* IFTTTJazzHandsViewController.h */,
+				F1542BD51C3423E800029448 /* IFTTTJazzHandsViewController.m */,
+				F1542B191C34223B00029448 /* ViewController.h */,
+				F1542B1A1C34223B00029448 /* ViewController.m */,
+				F1542BD11C3422C100029448 /* IFTTTCircleView.h */,
+				F1542BD21C3422C100029448 /* IFTTTCircleView.m */,
+				F1542B1C1C34223B00029448 /* Main.storyboard */,
+				F1542B1F1C34223B00029448 /* Assets.xcassets */,
+				F1542B211C34223C00029448 /* LaunchScreen.storyboard */,
+				F1542B241C34223C00029448 /* Info.plist */,
+				F1542B131C34223B00029448 /* Supporting Files */,
+			);
+			path = testJazzHands;
+			sourceTree = "<group>";
+		};
+		F1542B131C34223B00029448 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B141C34223B00029448 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1542B2C1C34223C00029448 /* testJazzHandsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B2D1C34223C00029448 /* testJazzHandsTests.m */,
+				F1542B2F1C34223C00029448 /* Info.plist */,
+			);
+			path = testJazzHandsTests;
+			sourceTree = "<group>";
+		};
+		F1542B371C34223C00029448 /* testJazzHandsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B381C34223C00029448 /* testJazzHandsUITests.m */,
+				F1542B3A1C34223C00029448 /* Info.plist */,
+			);
+			path = testJazzHandsUITests;
+			sourceTree = "<group>";
+		};
+		F1542B461C34225100029448 /* JazzHands */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B471C34225100029448 /* IFTTTAlphaAnimation.h */,
+				F1542B481C34225100029448 /* IFTTTAlphaAnimation.m */,
+				F1542B491C34225100029448 /* IFTTTAnimatable.h */,
+				F1542B4A1C34225100029448 /* IFTTTAnimatedPagingScrollViewController.h */,
+				F1542B4B1C34225100029448 /* IFTTTAnimatedPagingScrollViewController.m */,
+				F1542B4C1C34225100029448 /* IFTTTAnimatedScrollViewController.h */,
+				F1542B4D1C34225100029448 /* IFTTTAnimatedScrollViewController.m */,
+				F1542B4E1C34225100029448 /* IFTTTAnimation.h */,
+				F1542B4F1C34225100029448 /* IFTTTAnimation.m */,
+				F1542B501C34225100029448 /* IFTTTAnimator.h */,
+				F1542B511C34225100029448 /* IFTTTAnimator.m */,
+				F1542B521C34225100029448 /* IFTTTBackgroundColorAnimation.h */,
+				F1542B531C34225100029448 /* IFTTTBackgroundColorAnimation.m */,
+				F1542B541C34225100029448 /* IFTTTConstraintConstantAnimation.h */,
+				F1542B551C34225100029448 /* IFTTTConstraintConstantAnimation.m */,
+				F1542B561C34225100029448 /* IFTTTConstraintMultiplierAnimation.h */,
+				F1542B571C34225100029448 /* IFTTTConstraintMultiplierAnimation.m */,
+				F1542B581C34225100029448 /* IFTTTCornerRadiusAnimation.h */,
+				F1542B591C34225100029448 /* IFTTTCornerRadiusAnimation.m */,
+				F1542B5A1C34225100029448 /* IFTTTEasingFunction.h */,
+				F1542B5B1C34225100029448 /* IFTTTEasingFunction.m */,
+				F1542B5C1C34225100029448 /* IFTTTFilmstrip.h */,
+				F1542B5D1C34225100029448 /* IFTTTFilmstrip.m */,
+				F1542B5E1C34225100029448 /* IFTTTFrameAnimation.h */,
+				F1542B5F1C34225100029448 /* IFTTTFrameAnimation.m */,
+				F1542B601C34225100029448 /* IFTTTHideAnimation.h */,
+				F1542B611C34225100029448 /* IFTTTHideAnimation.m */,
+				F1542B621C34225100029448 /* IFTTTInterpolatable.h */,
+				F1542B631C34225100029448 /* IFTTTInterpolatable.m */,
+				F1542B641C34225100029448 /* IFTTTJazzHands.h */,
+				F1542B651C34225100029448 /* IFTTTLayerFillColorAnimation.h */,
+				F1542B661C34225100029448 /* IFTTTLayerFillColorAnimation.m */,
+				F1542B671C34225100029448 /* IFTTTLayerStrokeEndAnimation.h */,
+				F1542B681C34225100029448 /* IFTTTLayerStrokeEndAnimation.m */,
+				F1542B691C34225100029448 /* IFTTTLayerStrokeStartAnimation.h */,
+				F1542B6A1C34225100029448 /* IFTTTLayerStrokeStartAnimation.m */,
+				F1542B6B1C34225100029448 /* IFTTTMaskAnimation.h */,
+				F1542B6C1C34225100029448 /* IFTTTMaskAnimation.m */,
+				F1542B6D1C34225100029448 /* IFTTTPathPositionAnimation.h */,
+				F1542B6E1C34225100029448 /* IFTTTPathPositionAnimation.m */,
+				F1542B6F1C34225100029448 /* IFTTTRotationAnimation.h */,
+				F1542B701C34225100029448 /* IFTTTRotationAnimation.m */,
+				F1542B711C34225100029448 /* IFTTTScaleAnimation.h */,
+				F1542B721C34225100029448 /* IFTTTScaleAnimation.m */,
+				F1542B731C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.h */,
+				F1542B741C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.m */,
+				F1542B751C34225100029448 /* IFTTTShapeLayerAnimation.h */,
+				F1542B761C34225100029448 /* IFTTTShapeLayerAnimation.m */,
+				F1542B771C34225100029448 /* IFTTTTextColorAnimation.h */,
+				F1542B781C34225100029448 /* IFTTTTextColorAnimation.m */,
+				F1542B791C34225100029448 /* IFTTTTransform3DAnimation.h */,
+				F1542B7A1C34225100029448 /* IFTTTTransform3DAnimation.m */,
+				F1542B7B1C34225100029448 /* IFTTTTranslationAnimation.h */,
+				F1542B7C1C34225100029448 /* IFTTTTranslationAnimation.m */,
+				F1542B7D1C34225100029448 /* IFTTTViewAnimation.h */,
+				F1542B7E1C34225100029448 /* IFTTTViewAnimation.m */,
+				F1542B7F1C34225100029448 /* UIView+IFTTTJazzHands.h */,
+				F1542B801C34225100029448 /* UIView+IFTTTJazzHands.m */,
+			);
+			path = JazzHands;
+			sourceTree = "<group>";
+		};
+		F1542B9D1C34227F00029448 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B9E1C34227F00029448 /* ADFlipTransition */,
+				F1542BA91C34227F00029448 /* MASCompositeConstraint.h */,
+				F1542BAA1C34227F00029448 /* MASCompositeConstraint.m */,
+				F1542BAB1C34227F00029448 /* MASConstraint+Private.h */,
+				F1542BAC1C34227F00029448 /* MASConstraint.h */,
+				F1542BAD1C34227F00029448 /* MASConstraint.m */,
+				F1542BAE1C34227F00029448 /* MASConstraintMaker.h */,
+				F1542BAF1C34227F00029448 /* MASConstraintMaker.m */,
+				F1542BB01C34227F00029448 /* MASLayoutConstraint.h */,
+				F1542BB11C34227F00029448 /* MASLayoutConstraint.m */,
+				F1542BB21C34227F00029448 /* Masonry.h */,
+				F1542BB31C34227F00029448 /* MASUtilities.h */,
+				F1542BB41C34227F00029448 /* MASViewAttribute.h */,
+				F1542BB51C34227F00029448 /* MASViewAttribute.m */,
+				F1542BB61C34227F00029448 /* MASViewConstraint.h */,
+				F1542BB71C34227F00029448 /* MASViewConstraint.m */,
+				F1542BB81C34227F00029448 /* NSArray+MASAdditions.h */,
+				F1542BB91C34227F00029448 /* NSArray+MASAdditions.m */,
+				F1542BBA1C34227F00029448 /* NSArray+MASShorthandAdditions.h */,
+				F1542BBB1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				F1542BBC1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				F1542BBD1C34227F00029448 /* View+MASAdditions.h */,
+				F1542BBE1C34227F00029448 /* View+MASAdditions.m */,
+				F1542BBF1C34227F00029448 /* View+MASShorthandAdditions.h */,
+				F1542BC01C34227F00029448 /* ViewController+MASAdditions.h */,
+				F1542BC11C34227F00029448 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		F1542B9E1C34227F00029448 /* ADFlipTransition */ = {
+			isa = PBXGroup;
+			children = (
+				F1542B9F1C34227F00029448 /* ADFlipTransition.h */,
+				F1542BA01C34227F00029448 /* ADFlipTransition.m */,
+				F1542BA11C34227F00029448 /* UICollectionViewController+ADFlipTransition.h */,
+				F1542BA21C34227F00029448 /* UICollectionViewController+ADFlipTransition.m */,
+				F1542BA31C34227F00029448 /* UITableViewController+ADFlipTransition.h */,
+				F1542BA41C34227F00029448 /* UITableViewController+ADFlipTransition.m */,
+				F1542BA51C34227F00029448 /* UIView+CaptureImage.h */,
+				F1542BA61C34227F00029448 /* UIView+CaptureImage.m */,
+				F1542BA71C34227F00029448 /* UIViewController+ADFlipTransition.h */,
+				F1542BA81C34227F00029448 /* UIViewController+ADFlipTransition.m */,
+			);
+			path = ADFlipTransition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1542B0F1C34223B00029448 /* testJazzHands */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1542B3D1C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHands" */;
+			buildPhases = (
+				F1542B0C1C34223B00029448 /* Sources */,
+				F1542B0D1C34223B00029448 /* Frameworks */,
+				F1542B0E1C34223B00029448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testJazzHands;
+			productName = testJazzHands;
+			productReference = F1542B101C34223B00029448 /* testJazzHands.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1542B281C34223C00029448 /* testJazzHandsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1542B401C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHandsTests" */;
+			buildPhases = (
+				F1542B251C34223C00029448 /* Sources */,
+				F1542B261C34223C00029448 /* Frameworks */,
+				F1542B271C34223C00029448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1542B2B1C34223C00029448 /* PBXTargetDependency */,
+			);
+			name = testJazzHandsTests;
+			productName = testJazzHandsTests;
+			productReference = F1542B291C34223C00029448 /* testJazzHandsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F1542B331C34223C00029448 /* testJazzHandsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1542B431C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHandsUITests" */;
+			buildPhases = (
+				F1542B301C34223C00029448 /* Sources */,
+				F1542B311C34223C00029448 /* Frameworks */,
+				F1542B321C34223C00029448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1542B361C34223C00029448 /* PBXTargetDependency */,
+			);
+			name = testJazzHandsUITests;
+			productName = testJazzHandsUITests;
+			productReference = F1542B341C34223C00029448 /* testJazzHandsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1542B081C34223B00029448 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "疯哥";
+				TargetAttributes = {
+					F1542B0F1C34223B00029448 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = R56Z3W995A;
+					};
+					F1542B281C34223C00029448 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F1542B0F1C34223B00029448;
+					};
+					F1542B331C34223C00029448 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F1542B0F1C34223B00029448;
+					};
+				};
+			};
+			buildConfigurationList = F1542B0B1C34223B00029448 /* Build configuration list for PBXProject "testJazzHands" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1542B071C34223B00029448;
+			productRefGroup = F1542B111C34223B00029448 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1542B0F1C34223B00029448 /* testJazzHands */,
+				F1542B281C34223C00029448 /* testJazzHandsTests */,
+				F1542B331C34223C00029448 /* testJazzHandsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1542B0E1C34223B00029448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1542B231C34223C00029448 /* LaunchScreen.storyboard in Resources */,
+				F1542B201C34223B00029448 /* Assets.xcassets in Resources */,
+				F1542B1E1C34223B00029448 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B271C34223C00029448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B321C34223C00029448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1542B0C1C34223B00029448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1542BC81C34227F00029448 /* MASConstraint.m in Sources */,
+				F1542B8E1C34225100029448 /* IFTTTInterpolatable.m in Sources */,
+				F1542B8F1C34225100029448 /* IFTTTLayerFillColorAnimation.m in Sources */,
+				F1542B8C1C34225100029448 /* IFTTTFrameAnimation.m in Sources */,
+				F1542BC71C34227F00029448 /* MASCompositeConstraint.m in Sources */,
+				F1542B881C34225100029448 /* IFTTTConstraintMultiplierAnimation.m in Sources */,
+				F1542BCD1C34227F00029448 /* NSArray+MASAdditions.m in Sources */,
+				F1542B931C34225100029448 /* IFTTTPathPositionAnimation.m in Sources */,
+				F1542BD31C3422C100029448 /* IFTTTCircleView.m in Sources */,
+				F1542BCF1C34227F00029448 /* View+MASAdditions.m in Sources */,
+				F1542B851C34225100029448 /* IFTTTAnimator.m in Sources */,
+				F1542BC91C34227F00029448 /* MASConstraintMaker.m in Sources */,
+				F1542B1B1C34223B00029448 /* ViewController.m in Sources */,
+				F1542BCE1C34227F00029448 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F1542B911C34225100029448 /* IFTTTLayerStrokeStartAnimation.m in Sources */,
+				F1542BC21C34227F00029448 /* ADFlipTransition.m in Sources */,
+				F1542BD61C3423E800029448 /* IFTTTJazzHandsViewController.m in Sources */,
+				F1542BCA1C34227F00029448 /* MASLayoutConstraint.m in Sources */,
+				F1542BC61C34227F00029448 /* UIViewController+ADFlipTransition.m in Sources */,
+				F1542B9C1C34225100029448 /* UIView+IFTTTJazzHands.m in Sources */,
+				F1542B941C34225100029448 /* IFTTTRotationAnimation.m in Sources */,
+				F1542BC51C34227F00029448 /* UIView+CaptureImage.m in Sources */,
+				F1542B8D1C34225100029448 /* IFTTTHideAnimation.m in Sources */,
+				F1542B921C34225100029448 /* IFTTTMaskAnimation.m in Sources */,
+				F1542B9B1C34225100029448 /* IFTTTViewAnimation.m in Sources */,
+				F1542B901C34225100029448 /* IFTTTLayerStrokeEndAnimation.m in Sources */,
+				F1542B9A1C34225100029448 /* IFTTTTranslationAnimation.m in Sources */,
+				F1542BC31C34227F00029448 /* UICollectionViewController+ADFlipTransition.m in Sources */,
+				F1542B971C34225100029448 /* IFTTTShapeLayerAnimation.m in Sources */,
+				F1542B811C34225100029448 /* IFTTTAlphaAnimation.m in Sources */,
+				F1542BCB1C34227F00029448 /* MASViewAttribute.m in Sources */,
+				F1542B961C34225100029448 /* IFTTTScrollViewPageConstraintAnimation.m in Sources */,
+				F1542B871C34225100029448 /* IFTTTConstraintConstantAnimation.m in Sources */,
+				F1542B991C34225100029448 /* IFTTTTransform3DAnimation.m in Sources */,
+				F1542B831C34225100029448 /* IFTTTAnimatedScrollViewController.m in Sources */,
+				F1542B8A1C34225100029448 /* IFTTTEasingFunction.m in Sources */,
+				F1542B181C34223B00029448 /* AppDelegate.m in Sources */,
+				F1542B151C34223B00029448 /* main.m in Sources */,
+				F1542BD01C34227F00029448 /* ViewController+MASAdditions.m in Sources */,
+				F1542B841C34225100029448 /* IFTTTAnimation.m in Sources */,
+				F1542B951C34225100029448 /* IFTTTScaleAnimation.m in Sources */,
+				F1542B821C34225100029448 /* IFTTTAnimatedPagingScrollViewController.m in Sources */,
+				F1542B981C34225100029448 /* IFTTTTextColorAnimation.m in Sources */,
+				F1542B861C34225100029448 /* IFTTTBackgroundColorAnimation.m in Sources */,
+				F1542B8B1C34225100029448 /* IFTTTFilmstrip.m in Sources */,
+				F1542BCC1C34227F00029448 /* MASViewConstraint.m in Sources */,
+				F1542BC41C34227F00029448 /* UITableViewController+ADFlipTransition.m in Sources */,
+				F1542B891C34225100029448 /* IFTTTCornerRadiusAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B251C34223C00029448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1542B2E1C34223C00029448 /* testJazzHandsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1542B301C34223C00029448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1542B391C34223C00029448 /* testJazzHandsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1542B2B1C34223C00029448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1542B0F1C34223B00029448 /* testJazzHands */;
+			targetProxy = F1542B2A1C34223C00029448 /* PBXContainerItemProxy */;
+		};
+		F1542B361C34223C00029448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1542B0F1C34223B00029448 /* testJazzHands */;
+			targetProxy = F1542B351C34223C00029448 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F1542B1C1C34223B00029448 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1542B1D1C34223B00029448 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1542B211C34223C00029448 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1542B221C34223C00029448 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1542B3B1C34223C00029448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F1542B3C1C34223C00029448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1542B3E1C34223C00029448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 吉祥 傅 (YJBAE367L8)";
+				INFOPLIST_FILE = testJazzHands/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHands;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F1542B3F1C34223C00029448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 吉祥 傅 (YJBAE367L8)";
+				INFOPLIST_FILE = testJazzHands/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHands;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F1542B411C34223C00029448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = testJazzHandsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHandsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testJazzHands.app/testJazzHands";
+			};
+			name = Debug;
+		};
+		F1542B421C34223C00029448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = testJazzHandsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHandsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testJazzHands.app/testJazzHands";
+			};
+			name = Release;
+		};
+		F1542B441C34223C00029448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = testJazzHandsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHandsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = testJazzHands;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F1542B451C34223C00029448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = testJazzHandsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.vimer.testJazzHandsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = testJazzHands;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1542B0B1C34223B00029448 /* Build configuration list for PBXProject "testJazzHands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1542B3B1C34223C00029448 /* Debug */,
+				F1542B3C1C34223C00029448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1542B3D1C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1542B3E1C34223C00029448 /* Debug */,
+				F1542B3F1C34223C00029448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F1542B401C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHandsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1542B411C34223C00029448 /* Debug */,
+				F1542B421C34223C00029448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F1542B431C34223C00029448 /* Build configuration list for PBXNativeTarget "testJazzHandsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1542B441C34223C00029448 /* Debug */,
+				F1542B451C34223C00029448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1542B081C34223B00029448 /* Project object */;
+}

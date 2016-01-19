@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!--按照百分比来布局-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=api">
+		<title>viewport</title>
+		<style type="text/css">
+			html, body {
+				width:100%;
+				height:100%;
+				font-size:20px; /*20px=1rem*/
+				/*				font-size:40px; /*40px=1rem*/
+				overflow:hidden; 
+			}
+			@media only screen and (min-width: 401px){
+				html {
+					font-size: 25px !important;
+				}
+			}
+			@media only screen and (min-width: 428px){
+				html {
+					font-size: 26.75px !important;
+				}
+			}
+			@media only screen and (min-width: 481px){
+				html {
+					font-size: 30px !important; 
+				}
+			}
+			@media only screen and (min-width: 569px){
+				html {
+					font-size: 35px !important; 
+				}
+			}
+			@media only screen and (min-width: 641px){
+				html {
+					font-size: 40px !important; 
+				}
+			}
+			* {
+				margin:0px;
+				padding:0px;
+				outline:none;
+			}
+			.btn {
+				width: 6rem; 
+				height: 3rem;
+				line-height: 3rem;
+				font-size: 1.2rem;
+				display: inline-block;
+				background: #06c;
+				color: #fff;
+				border-radius: .5rem;
+				text-decoration: none;
+				text-align: center; 
+			}
+		</style>
+	</head>
+	<body>
+		<a href="##" class="btn" role="button">确定</a>
+	</body> 
+</html>
+<script>
+	/*(function (doc, win) {
+	  var docEl = doc.documentElement,
+	  resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'  ,
+	  recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	  console.log(docEl.style.fontSize)
+	  };
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	  })(document, window);*/
+  </script>

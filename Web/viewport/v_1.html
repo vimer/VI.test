@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>viewport</title>
+		<style type="text/css">
+			html, body {
+				width:100%;
+				height:100%;
+			}
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			.content {
+				position:relative;
+				width:320px;
+				height:100%;
+				left:0px;
+			}
+			.div_1 {
+				border:1px solid red;
+			}
+			.div_2 {
+				border:1px solid blue;
+			}
+			.div_3 {
+				border:1px solid #d2f;
+			}
+			html {
+				/*width:300px;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="div_1" style="">
+				test_3
+				<div class="div_2" style="">
+					test_2
+					<div class="div_3" style="width:20%">
+						test_1
+					</div>
+				</div>
+			</div>
+		</div>
+	</body> 
+</html>

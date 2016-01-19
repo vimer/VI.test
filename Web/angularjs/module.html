@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html ng-app="ShoppingModule">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="./angular.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body ng-controller="ShoppingController">
+		<h1>Shop</h1>
+		<table>
+			<tr ng-repeat="item in items">
+				<td>{{item.title}}</td>
+				<td>{{item.description}}</td>
+				<td>{{item.price}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script>
+	function ShoppingController($scope, good) {
+		$scope.items = good.query();
+	}
+	var shoppingModule = angular.module("ShoppingModule", []);
+	//创建模块,提供给多个控制器使用
+	shoppingModule.factory("good", function(){
+		var items = {}
+		items.query = function() {
+			return [
+				{title: 'Paint pots', description: 'Pots full of paint', price: 3.95},
+				{title: 'Polka dots', description: 'Dots with polka', price: 2.95},
+				{title: 'Pebbles', description: 'Just little rocks', price: 6.95}
+			];
+		};
+		return items;
+	})
+</script>

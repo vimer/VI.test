@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!--按照百分比来布局-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=api">
+		<title>viewport</title>
+		<style type="text/css">
+			html, body {
+				width:100%;
+				height:100%;
+				overflow:hidden; /*notes*/
+			}
+			* {
+				margin:0px;
+				padding:0px;
+				outline:none;
+			}
+			.content {
+				width:100%;
+				height:100%;
+				background-color:#eee;
+				left:0;
+				top:0;
+				position:relative;
+			}
+			.div_1 {
+				border:1px solid red;
+				width:100%;
+				height:49%;
+			}
+			.div_2 {
+				border:2px solid blue;
+				width:100%;
+				height:51%;
+			}
+			.col {
+				margin-top:1px;
+				overflow:hidden;
+				width:100%;
+				height:50%;
+			}
+			.box {
+				width:49%;
+				height:100%;
+				margin-left:1px;
+				text-align:center;
+				color:#666666;
+				background-color:#fff;
+				float:left;
+				border:1px solid green;
+				font-size:12px;
+			}
+			.box .item {
+				margin-top:18%;
+				border:0px solid red;
+			}
+			.box .item .imgSize {
+				width:30%;
+				height:20%;
+			}
+			.box .item .fontTop {
+				margin-top:2%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="div_1">
+				<img src="./img/pic.jpg" width="100%" height="100%"/>
+			</div>
+			<div class="div_2">
+				test
+				<div class="col">
+					<div class="box">
+						<div class="item">
+							<p><img src="./img/icons/zhanlan@2x.png" class="imgSize"/></p>
+							<p class="fontTop">展览</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="item">
+							<p><img src="./img/icons/bowuguan@2x.png" class="imgSize"/></p>
+							<p class="fontTop">博物馆</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="box">
+						<div class="item">
+							<p><img src="./img/icons/bowen@2x.png" class="imgSize"/></p>
+							<p class="fontTop">博文</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="item">
+							<p><img src="./img/icons/zaixianjiangjie@2x.png" class="imgSize"/></p>
+							<p class="fontTop">在线讲解</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body> 
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJs基本玩法</title>
+		<meta charset="utf-8">
+		<script src="./angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-controller="TextController">
+		<p>{{someText.message}}</p>
+		</div>
+	</body>
+</html>
+<script>
+	//告知模块名字, 需要ng-app="myApp" 需要赋一个值, 一个页面只能有一个ng-app
+	var myAppModule = angular.module("myApp", []);
+	myAppModule.controller("TextController", function($scope) {
+		var someText = {};
+		someText.message = "You have started your journey.";
+		$scope.someText = someText;
+	})
+
+	//不需要赋值
+/*function TextController($scope) {
+	var someText = {};
+	someText.message = "You have started your journey.";
+	$scope.someText = someText;
+}*/
+</script>

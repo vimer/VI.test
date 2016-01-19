@@ -1,0 +1,3 @@
+export GOPATH=~/Codes/ig.test/Go/calcproj
+go编译器编译器的时候先从PATH中找src, 再根据go build XXX,寻找XXX的package的文件.
+根据package的文件的import再从PATH中找其他的.

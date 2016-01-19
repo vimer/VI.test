@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<!--v1.3.16-->
+<html ng-app="basic">
+	<head>
+		<title>AngularJs v1.3.16基本玩法</title>
+		<meta charset="utf-8">
+		<script src="./scripts/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-controller="helloworld as hw">
+			<input ng-model="hw.greeting.text" ng-init="name='crazybaby';age=28;array=[1,2,3,4];friends=[{'name':'Tom'},{'name':'Jerry'},{'name':'Geeker'}];">
+			<p>{{hw.greeting.text | uppercase}}, {{name}}, {{age}}, {{array[1]}}, {{friends}}</p>
+			<p ng-bind="hw.greeting.text"></p>
+			<hr>
+			<div ng-init="click=false">
+				<button ng-click="click=!click">隐藏/显示</button>
+				<button ng-click="hw.sayHello()">打招呼</button>
+				<div ng-hide="click">
+					显示的内容
+				</div>
+			</div>
+			<hr>
+			<table>
+				<tbody>
+					<tr ng-repeat="x in friends">
+						<td>{{"Name:" + x.name}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+			<div ng-init="geekers=[{'geeker_name':10},{'geeker_name':'20'},{'geeker_name':'30'}]">
+				<input type="text" ng-model="geeker_name">
+				<ul style="list-style-type:none">
+					<li>姓名</li>
+					<li ng-repeat="x in geekers | filter:geeker_name">
+						{{x.geeker_name}}
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<img ng-src="{{hw.img_src}}" width="200px" height="300px">
+			<hr>
+			<button ng-click="count=3">Set count={{count}}</button>
+			 <div ng-controller="CountController">
+				 <div>{{gem.name}}</div>
+				 <div>{{gem.age}}</div>
+				 <button ng-click="setCount()">Set count={{count}}</button>
+			</div>
+			<hr>
+		</div>
+	</body>
+</html>
+<script>
+	(function() {
+		//使用this
+		var app = angular.module("basic", []);
+		app.controller("helloworld", function() {
+			var me = this;
+			me.img_src = "./test.jpg";
+			me.sayHello = function() {
+				me.greeting = {text:"sayHello"};
+			}
+		})
+		
+		//使用$scope
+		app.controller("CountController", function($scope) {
+			$scope.setCount = function() {
+				$scope.count = 4;
+				$scope.gem = gem;
+			}
+		})
+
+		var gem = {
+			name:"geeker",
+			age:24
+		}
+	})();
+</script>

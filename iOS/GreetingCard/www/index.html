@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <script>
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+            //iOS中调用JS
+            function showDivMsg(msg) {
+                $('msg').innerHTML = msg;
+            }
+            //JS调用iOS中方法
+            function showiOSMsg(msg) {
+                var obj = new Object();
+                obj.msg = msg;
+                var JSONString = JSON.stringify(msg);
+                var uri = 'phoneGap://ios.method#' + JSONString;
+                window.location = uri;
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h2>iOS及js互相调用</h2>
+        <button onclick='showiOSMsg("js调用iOS方法")'>调用iOS对象</button>
+        <br><br>
+        <div  id='msg'></div>
+    </body>
+    
+</html>

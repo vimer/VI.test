@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>通过rem来布局</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            overflow: hidden;
+            outline: 0;
+        }
+		* {
+			margin:0px;
+			margin:0px;
+		}
+		.div_1 {
+			/*border:1px solid red;*/
+			width:100%;
+			height:100%;
+		}
+		.div_2 {
+			/*border:1px solid blue;*/
+			width:100%;
+			height:100%;
+			margin-top:3.5rem;
+		}
+		.div_3 {
+			/*border:1px solid green;*/
+			width:100%;
+			height:100%;
+			margin-top:3.5rem;
+		}
+		.img {
+			width:100%;
+			height:7rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="div_1">
+		<img src="./img/640_284.jpg" class="img"/>
+	</div>
+	<div class="div_2">
+		<img src="./img/640_284.jpg" class="img"/>
+	</div>
+	<div class="div_3">
+		<img src="./img/640_284.jpg" class="img"/>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	//设计按照640*1136设计，若按照320来布局，那么底部要写320，且所有大小要除以2，再除以20
+	(function (doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+			var clientWidth = docEl.clientWidth;
+			if (!clientWidth) return;
+			docEl.style.fontSize = 20 * (clientWidth / 320) + 'px'; //按照640来设计
+			console.log(docEl.style.fontSize)
+		};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>

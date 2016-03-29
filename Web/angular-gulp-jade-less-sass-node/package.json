@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0"
+  },
+  "scripts": {
+    "prestart": "bower install",
+    "start": "npm install",
+    "poststart": "gulp"
+  }
+}

@@ -3,7 +3,7 @@
 	<head>
 		<title></title>
 		<meta charset="utf-8">
-		<script src="./angular.min.js"></script>
+		<script src="./scripts/angular.min.js"></script>
 		<style>
 		</style>
 	</head>
@@ -19,10 +19,10 @@
 	</body>
 </html>
 <script>
-	function ShoppingController($scope, good) {
-		$scope.items = good.query();
-	}
 	var shoppingModule = angular.module("ShoppingModule", []);
+	shoppingModule.controller("ShoppingController", function($scope, good) {
+		$scope.items = good.query();
+	});
 	//创建模块,提供给多个控制器使用
 	shoppingModule.factory("good", function(){
 		var items = {}

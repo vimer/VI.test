@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html ng-app="test">
+	<head>
+		<title>服务</title>
+		<meta charset="utf-8">
+		<script src="./scripts/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainCtrl"> 
+			MainCtrl:
+			<input type="text" ng-model="user"> 
+			<div ng-click="greet()">click</div>
+			{{user}}
+		</div>
+		<div ng-controller="SecondCtrl"> 
+			SecondCtrl:
+			<input type="text" ng-model="user"> 
+			<div ng-click="greet()">click</div>
+			{{user}}
+		</div> 
+	</body>
+</html>
+<script type="text/javascript">
+	(function(){
+		var app = angular.module("test", []);
+		app.factory('UserInformation', function() {  
+			var user = "Angular";
+			return user;  
+		}); 
+		app.controller('MainCtrl', function($scope, UserInformation) {
+			$scope.greet = function () {
+				$scope.user = UserInformation;
+			}
+		});
+		app.controller('SecondCtrl', function($scope, UserInformation) {
+			$scope.greet = function () {
+				$scope.user = UserInformation;
+			}
+		});
+	})();
+</script>

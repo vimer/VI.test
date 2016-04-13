@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="test">
+	<head>
+		<title>run</title>
+		<meta charset="utf-8">
+		<script src="./scripts/angular.min.js"></script>
+	</head>
+	<body>
+		{{user}}
+		<div ng-controller="MainCtrl"> 
+			<input type="text" ng-model="user"> 
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	(function(){
+		var app = angular.module("test", []);
+		app.run(function($rootScope) {
+			$rootScope.user = 123;
+		});
+	})();
+</script>

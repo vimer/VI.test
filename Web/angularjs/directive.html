@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!--v1.3.16-->
+<html ng-app="test">
+	<head>
+		<title>指令</title>
+		<meta charset="utf-8">
+		<script src="./scripts/angular.min.js"></script>
+	</head>
+	<body ng-controller="MainCtrl">
+		<input type="text" ng-model="name" ng-init="name=123;" /> 
+		<p>Echo: {{name}}</p>
+		<button ng-click="greet()">Click here!</button>
+		<h3>{{ message }}</h3> 
+		<hello></hello>
+	</body>
+</html>
+<script type="text/javascript">
+	(function(){
+		var app = angular.module("test", []);
+		app.controller("MainCtrl", function($scope) {
+			$scope.greet = function() {
+				$scope.message = "Hello, " + $scope.name;
+			}
+		});
+		app.directive('hello', function() {  
+			return {  
+				restrict: "E",  
+				replace: true,  
+				template: "<div>Hello readers, thank you for coming</div>" 
+			}  
+		}); 
+	})();
+</script>

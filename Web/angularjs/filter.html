@@ -3,20 +3,24 @@
 	<head>
 		<title></title>
 		<meta charset="utf-8">
-		<script src="./angular.min.js"></script>
+		<script src="./scripts/angular.min.js"></script>
 		<style>
 		</style>
 	</head>
-	<body ng-controller="HomeController">
-		<h1>{{pageHeading | titleCase}}</h1>
+	<body ng-controller="HomeController as hc">
+		<h1>{{hc.pageHeading | titleCase}}</h1>
 	</body>
 </html>
 <script>
-	function HomeController($scope) {
-		$scope.pageHeading = "hello world"
-	}
+/*	function HomeController($scope) {
+		$scope.pageHeading = "hello world";
+	}*/
 	var homeModule = angular.module("HomeModule", []);
-	//创建过滤器
+	homeModule.controller("HomeController", function() {
+		var me = this;
+		me.pageHeading = "adsad";
+	})
+	//创建过滤器, 相当于对数据进行处理
 	homeModule.filter("titleCase", function() {
 		var titleCaseFilter = function(input) {
 			var words = input.split(" ");

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>无标题文档</title>
+        <script type="text/javascript" src="../scripts/angular.min.js"></script>
+    </head>
+    <body>
+      <div ng-app="myApp">
+
+          <div ng-controller="firstController">
+              {{name}}
+              {{age}}
+              <div ng-controller="secondController">
+                  {{name}}
+                  {{age}}
+                  {{sex}}
+              </div>
+          </div>
+          {{sex}}
+      </div>
+      <script type="text/javascript">
+          var app = angular.module("myApp", []);
+          app.controller('firstController',['$scope',function($scope){
+              $scope.name='张三';
+          }]);
+          app.controller('secondController',['$scope','$rootScope',function($scope,$rootScope){
+              $scope.name='李四';
+              $rootScope.age='30';
+          }]);
+
+		  //不属于任何controller，一个全局的方法，相当于放全局变量在里面
+		  //run 方法初始化全局的数据 ,只对全局作用域起作用 如$rootScope
+          app.run(['$rootScope',function($rootScope){
+              $rootScope.sex='男';
+          }]);
+      </script>
+    </body>
+</html>

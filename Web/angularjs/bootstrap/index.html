@@ -1,114 +1,36 @@
-<!DOCTYPE HTML>
-<html ng-app="bootstrap">
+<!DOCTYPE html>
+<html>
 	<head>
-		<title>AngularJS Bootstrap</title>
-		<meta charset="utf-8">
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<script src="../scripts/angular.min.js"></script>
-		<script src="../scripts/ui-bootstrap-tpls-0.13.0.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<script type="text/javascript" src="../scripts/angular.min.js"></script>
 	</head>
 	<body>
-		<div ng-controller="AlertDemoCtrl">
-			<h1>一.Alert</h1>
-			<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-			<button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
-		</div>
-		<hr>
-		<div ng-controller="AccordionDemoCtrl">
-			<h1>二.Accordion</h1>
-			<label class="checkbox">
-				<input type="checkbox" ng-model="oneAtTime">
-				Open ony one at a time
-			</label>
-			<accordion close-others="oneAtTime">
-			<accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-				This content is straight in the template.
-			</accordion-group>
-			<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-				{{group.content}}
-			</accordion-group>
-			<accordion-group heading="Dynamic Body Content">
-				<p>The body of the accordion group grows to fit the contents</p>
-				<button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
-				<button class="btn btn-default btn-sm" ng-click="removeItem()">Remove Item</button>
-				<div ng-repeat="item in items">{{item}}</div>
-			</accordion-group>
-			<accordion-group is-open="status.open">
-				<accordion-heading>
-					I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-				</accordion-heading>
-				This is just some content to illustrate fancy headings.
-			</accordion-group>
-			</accordion>
-		</div>
-		<hr>
-		<div ng-controller="ButtonCtrl">
-			<h1>三.Buttons</h1>
-			<pre>{{singleModel}}</pre>
-			<button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">singleModel</button>
-			<pre>{{checkModel}}</pre>
-			<div class="btn-group">
-				<label class="btn btn-primary" ng-model="checkModel.left" btn-checkbox>Left</label>
-				<label class="btn btn-primary" ng-model="checkModel.middle" btn-checkbox>Middle</label>
-				<label class="btn btn-primary" ng-model="checkModel.right" btn-checkbox>Right</label>
+		<div>
+			<div id='div1' ng-controller="firstController">
+				{{name}}
 			</div>
-			<pre>{{radioModel || 'null'}}</pre>
-			<div class="btn-group">
-				<label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'">Left</label>
-				<label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Middle</label>
-				<label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Right</label>
+			<div  id='div2'  ng-controller="secondController">
+				{{name}}
 			</div>
+		</div>
+		<script type="text/javascript">
+			var app1 = angular.module("myApp1", []);
+			var app2 = angular.module("myApp2", []);
+			app1.controller('firstController',function($scope){
+				$scope.name='张三';
+			});
+			app2.controller('secondController',function($scope){
+				$scope.name='李四';
+
+			});
+			var div1=document.getElementById('div1');
+			var div2=document.getElementById('div2');
+			//动态初始化module
+			document.onclick=function(){
+				angular.bootstrap(div1, ['myApp1']);
+				angular.bootstrap(div2, ['myApp2']);
+			}
+		</script>
 	</body>
 </html>
-<script>
-	var app = angular.module("bootstrap", ["ui.bootstrap"]);
-	//{{{alert
-	app.controller("AlertDemoCtrl", function($scope){
-
-		$scope.alerts = [
-			{ type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-			{ type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-		];
-
-		$scope.addAlert = function() {
-			$scope.alerts.push({msg: 'Another alert!'});
-		};
-
-		$scope.closeAlert = function(index) {
-			$scope.alerts.splice(index, 1);
-		};
-	})
-	//}}}
-	//{{{Accordion	
-	app.controller("AccordionDemoCtrl", function($scope){
-		$scope.oneAtTime = true;
-		$scope.groups = [
-			{"title":"Group-1","content":"Body-1"},
-			{"title":"Group-2","content":"Body-2"}
-		]
-		$scope.items=["item1","item2","item3"];
-		$scope.addItem = function() {
-			var newItemNo = $scope.items.length + 1;
-			$scope.items.push("Item " + newItemNo)
-		}
-		$scope.removeItem = function() {
-			$scope.items.pop()
-		}
-		$scope.status = {
-			isFirstOpen:true,
-			isFirstDisabled:false
-		}
-	})
-	//}}}
-	//{{{Buttons
-	app.controller("ButtonCtrl", function($scope){
-		$scope.checkModel = {
-			left: false,
-			middle: true,
-			right: false
-		}
-		$scope.radioModel = 'Middle';
-	})	
-	//}}}
-</script>
-

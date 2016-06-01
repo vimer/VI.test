@@ -1,0 +1,23 @@
+{
+  "name": "bower",
+  "homepage": "https://github.com/vimer/VI.test",
+  "authors": [
+    "疯哥 <emacs@vimer.org>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.2"
+  }
+}

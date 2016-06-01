@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!--v1.3.16-->
+<html ng-app="search">
+	<head>
+		<title>AngularJs v1.3.16基本玩法</title>
+		<meta charset="utf-8">
+		<script src="../scripts/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-controller="cc">
+			<input ng-model='name' type='text'></input>
+			<ul>
+				<li ng-repeat="x in names | filter:name | orderBy:'name'">
+					{{x.name}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+<script>
+	var app = angular.module("search", []);
+	app.controller("cc", function($scope) {
+		$scope.names = [
+			{name:1},
+			{name:3},
+			{name:2}
+		];
+	})
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>无标题文档</title>
+		<script src="../scripts/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="firstController">
+			{{name}}
+		</div>
+		<script>
+			//当你初试 Angular 时，很自然地就会往 controller 和 scope 里堆满不必要的逻辑。 一定要早点意识到，controller 这一层应该很薄；也就是说，应用里大部分的业务逻辑 和持久化数据都应该放在 service 里。很多人问道，关于如何在 controller 里保存持 久化数据。这就不是 controller 该干的事。出于内存性能的考虑，controller 只在需要 的时候才会初始化，一旦不需要就会被抛弃。因此，每次当你切换或刷新页面的时候， Angular 会清空当前的 controller。与此同时，service 可以用来永久保存应用的数据， 并且这些数据可以在不同的 controller 之间使用。 
+			var m1 = angular.module('myApp', [], function($provide) {
+				//Providers 是唯一一种你可以传进 .config() 函数的 service。当你想要在 service 对象启用之前，先进行模块范围的配置，那就应该用 provider。 
+				$provide.provider('providerServices01', function() {
+					this.$get = function() {
+						return {
+							message:'this is providerServices01'
+						}
+					}
+				});
+			});
+
+			console.log(m1);
+			m1.controller('firstController', ['$scope', 'providerServices01', function($scope,providerServices01) {
+				console.log(providerServices01.message);
+				$scope.name='张三';
+			}]);
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<header>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<script src="../scripts/angular.min.js"></script>
+		</header>
+		<div ng-app="myApp">
+			<div ng-controller="firstController">
+				<p>在输入框中尝试输入：</p>
+				<p>姓名：<input type="text" ng-model="firstName"></p>
+				{{firstName | uppercase }}
+				{{lastName}}
+				{{price | currency}}
+				<br><br>     <br><br>
+				转成json格式 {{json | json }} <!--转成json格式-->
+				<br><br>
+				<br>
+				格式化时间 {{ 1304375948024 | date:"yyyy-MM-dd hh:mm:ss" }}
+				<br><br>
+				保留2位 {{ 1.234567 | number:2 }}
+				<br><br>
+				转换成人民币形式 {{ 250 | currency:"RMB ￥ " }}
+				<br><br>
+				显示6个字符 {{ "i love tank" | limitTo:6 }}
+				<br><br>
+				从后显示6个字符{{ "i love tank" | limitTo:-6 }}
+				<br><br>
+				{{ [{"age": 20,"id": 10,"name": "iphone"},
+						{"age": 12,"id": 11,"name": "sunm xing"},
+						{"age": 44,"id": 12,"name": "test abc"}
+						] | orderBy:'id':true }}
+				<br><br>
+				{{ [{"age": 20,"id": 10,"name": "iphone"},
+						{"age": 12,"id": 11,"name": "sunm xing"},
+						{"age": 44,"id": 12,"name": "test abc"}
+						] | orderBy:'id' }}
+			</div>
+			<div ng-controller="secondController">
+				<ul>
+					<li ng-repeat="p in person">
+						姓名：{{p.name}}
+						年龄：{{p.age}}
+					</li>
+				</ul>
+				<p>循环对象：</p>
+				<ul>
+					<li ng-repeat="x in names | orderBy:'country':true"> <!--正反序-->
+						{{ x.name + ' , ' + x.country }}
+					</li>
+				</ul>
+				<p>所有的内容进行过滤： </p>
+				<p><input type="text" ng-model="name"></p>
+				<ul>
+					<li ng-repeat="x in names | filter:name | orderBy:'country'">
+						{{ (x.name | uppercase) + ', ' + x.country }}
+					</li>
+				</ul>
+				<p>只是内容的筛选：</p>
+				<ul>
+					<li ng-repeat="x in names | filter:{'name':name} | orderBy:'country'">
+						{{ (x.name | uppercase) + ', ' + x.country }}
+					</li>
+				</ul>
+				{{ [{"age": 20,"id": 10,"name": "iphone"},
+						{"age": 12,"id": 11,"name": "sunm"},
+						{"age": 44,"id": 12,"name": "test abc"}
+						] | filter:{'name':'sunm'} }}
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app=angular.module("myApp",[]);
+			app.controller('firstController',function($scope,$filter){
+				$scope.firstName="zhangsan";
+				$scope.lastName="李四";
+				$scope.price="12121212";
+				$scope.str='HelloWord';
+				$scope.json={foo: "bar", baz: 23};
+				//对字符串进行单个处理
+				$scope.uFirstName=$filter('uppercase')($scope.firstName);
+				// $scope.cprice= $filter('currency')($scope.price);
+				$scope.cprice= $filter('currency')($scope.price, 'RMB ');
+				console.log($scope.uFirstName);
+				console.log($scope.cprice);
+			});
+			app.controller('secondController',function($scope){
+				$scope.person=[
+					{name:'张三',age:'25'},
+					{name:'李四',age:'30'},
+					{name:'王五',age:'36'}
+				];
+				$scope.names = [
+					{name:'Jani',country:'Norway'},
+					{name:'Hege',country:'Sweden'},
+					{name:'Kai',country:'Denmark'}
+				];
+			});
+		</script>
+	</body>
+</html>

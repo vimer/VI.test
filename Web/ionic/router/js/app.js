@@ -21,10 +21,10 @@ angular.module('myApp', ['ionic', 'myApp.controllers'])
     templateUrl: "templates/tabs.html"
   })
   // Each tab has its own nav history stack:
-  .state('tab.tab1', {
-    url: '/tab1',
+  .state('tab.tab4', {
+    url: '/tab4',
     views:{ //指定视图
-        'tab-tab1':{
+        'tab-tab':{
             templateUrl: "templates/tab-tab1.html",
             controller:'tab1Controller'
         }
@@ -48,8 +48,8 @@ angular.module('myApp', ['ionic', 'myApp.controllers'])
           }
       }
   })
-  .state('tab.content1', {
-      url: '/content1/:id',
+  .state('tab.content4', {
+      url: '/content4/:id',
       views:{
           'tab-tab1':{
               templateUrl: "templates/tab-content1.html",
@@ -62,6 +62,6 @@ angular.module('myApp', ['ionic', 'myApp.controllers'])
         templateUrl: "templates/news.html"
       })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/tab1');
+  $urlRouterProvider.otherwise('/tab/tab4');
 
 });

@@ -1,0 +1,18 @@
+<html>
+</html>
+<script type="text/javascript" src="./scripts/zepto.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		"type": "GET",
+		"url" : 'http://127.0.0.1:3000/account/get',
+		"data" :{email: "get", password: "get"},
+		"dataType" : "jsonp",
+		"traditional": true,
+		success: function(data) {
+			console.log(data)
+		},
+		error: function(err) {
+			console.log(err);
+		}
+	});
+</script>

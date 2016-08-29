@@ -1,6 +1,6 @@
 function foo() {throw new Error('Foo error')}
 function bar() {
-	setImediate(function() { //把调用放到队列上去
+	setImmediate(function() { //把调用放到队列上去
 		throw new Error('bar error');
 	})
 }

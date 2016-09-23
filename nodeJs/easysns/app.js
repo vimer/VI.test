@@ -1,57 +1,63 @@
-var http = require('http')
-var parseUrl = require('url').parse
-var controllers = require('./controllers/')
-
-//function homeController(req, res) {
-	//res.end('home')
-//}
-
-//function userController(req, res) {
-	//res.end('user')
-//}
-
-//function staticController(req, res) {
-	//res.end('static')
-//}
+const http = require('http');
+const parseUrl = require('url').parse;
+const controllers = require('./controllers');
+const authorize = require('./middlewares/authorize');
 
 function notFoundController(req, res) {
-	res.end('Not found')
+	res.end('404');
 }
 
-function find(ary, match) {
-	for (var i=0; i<ary.length; i++) {
-		if (match(ary[i])) return ary[i]
+const routes = [
+	{
+		path      : '/',
+		controller: controllers.home
+	},
+	{
+		path      : '/user',
+		controller: controllers.user.user
+	},
+	{
+		path      : '/my/avatar',
+		controller: controllers.user.myAvatar
+	},
+	{
+		path      : '/auth/register',
+		controller: controllers.auth.register
+	},
+	{
+		path      : '/auth/login',
+		controller: controllers.auth.login
+	},
+	{
+		path      : /^\/static(\/.*)/,
+		controller: controllers.static.static
+	},
+	{
+		path      : /^\/upload(\/.*)/,
+		controller: controllers.static.upload
+	}
+];
+
+function find(routes, match) {
+	for (var route of routes) {
+		if (match(route)) {
+			return route;
+		}
 	}
 }
 
-const rules = [
-	{path: '/', controller: controllers.home},
-	{path: '/auth/register', controller: controllers.auth.register, method:'post'},
-	{path: '/auth/login', controller: controllers.auth.login, method:'post'},
-	{path: '/user', controller: controllers.user},
-	{path: /^\/static(\/.*)/, controller: controllers.static}
-]
-
-var server = http.createServer(function(req, res) {
-	var urlInfo = parseUrl(req.url)
-	//console.log(req.url, urlInfo)
-	var rule = find(rules, function(rule) {
-		if (rule.method) {
-			if (rule.method.toLowerCase() != req.method.toLowerCase()) {
-				return false
-			}
+var server = http.createServer(function (req, res) {
+	var urlInfo = parseUrl(req.url);
+	var route = find(routes, function (route) {
+		if (route.path instanceof RegExp) {
+			var info = urlInfo.pathname.match(route.path);
+			req.params = info;
+			return info;
 		}
-		if (rule.path instanceof RegExp) {
-			var matchResult =  urlInfo.pathname.match(rule.path)
-			if (matchResult) {
-				req.params = matchResult
-			}
-			return matchResult
-		}
-		return rule.path == urlInfo.pathname
-	})
-	var controller = rule && rule.controller || notFoundController
-	controller(req, res)
+		return route.path === urlInfo.pathname;
+	});
+	var controller = route && route.controller || notFoundController;
+	authorize(controller)(req, res);
 });
 
-server.listen(8080)
+server.listen(3000);

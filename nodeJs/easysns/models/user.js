@@ -1,15 +1,15 @@
 const BaseModel = require('./base');
 
-function UserModel(store) {
+function UserModel(store) { //继承
 	BaseModel.call(this, store, 'user:');
 }
 
 const PREFIX_EMAIL_TO_ID = 'email-id:';
 
-Object.assign(UserModel.prototype, BaseModel.prototype, {
-	create: function (obj, callback) {
+Object.assign(UserModel.prototype, BaseModel.prototype, { //把父类的原型函数复制到子类
+	create: function (obj, callback) {//重载父类的create
 		const self = this;
-		BaseModel.prototype.create.call(this, obj, function (err, result) {
+		BaseModel.prototype.create.call(this, obj, function (err, result) { //先调用父类create
 			if (err) {
 				callback(err);
 				return;

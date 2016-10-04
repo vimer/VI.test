@@ -13,6 +13,10 @@ const routes = [
 		controller: controllers.home
 	},
 	{
+		path      : '/cook',
+		controller: controllers.cook
+	},
+	{
 		path      : '/user',
 		controller: controllers.user.user
 	},

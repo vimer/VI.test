@@ -12,8 +12,7 @@
 			}).then(function (json) {
 				callback(null, json)
 			}).catch(function (err) {
-				callback(err)
-			})
+
 		}
 	}
 

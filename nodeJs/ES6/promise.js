@@ -51,7 +51,20 @@
  */
 
 //Promise.all
-Promise.all([Promise.resolve(1), Promise.resolve(2)])
-.then(results => console.log(results))
+/*
+ *Promise.all([Promise.resolve(1), Promise.resolve(2)])
+ *.then(results => console.log(results))
+ *
+ *Promise.all([Promise.resolve(1), Promise.reject('wrong')])
+ *.then(results => console.log(results))
+ *.catch(err => console.log(err))
+ */
 
+function delay(ms, value) {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => resolve(value), ms)
+	})
+}
 
+Promise.race([delay(10, 'tom'), delay(20, 'jack')])
+.then(result => console.log('results', result))

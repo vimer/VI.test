@@ -1,6 +1,8 @@
 //async function foo(x) {
 	//try {
+		////await 可以等待Promise完成
 		//let v = await Promise.resolve(x);
+		////异步的return的值
 		//return v+1;
 	//} catch (err) {
 		//console.error('Error', err.stack)
@@ -12,19 +14,20 @@
 
 
 //读文件
+var co = require('co');
 var fs = require("fs");
+var mzfs = require('mz/fs');
 var co_fs = require('co-fs');
-async function foo() {
-	var v = await co_fs.readFile('./async.js', 'utf8');
-	console.log(v.value())
-	//await new Promise(function(resolve) {
-		//fs.readFile('./async.js', 'utf8', (err, res) => {
-			//return res;
-			//resolve();
-		//});
-	//})
-}
-foo()
+/*
+ *co(function* gen() {
+ *    var v = yield co_fs.readFile('./async.js', 'utf8');
+ *    console.log(v)
+ *});
+ */
 
-//var res = foo()
-//console.log(res)
+async function foo() {
+	const v = await mzfs.readFile('./async.js', 'utf8');
+	return v;
+}
+foo().then(v => console.log(v))
+

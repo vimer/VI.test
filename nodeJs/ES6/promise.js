@@ -60,11 +60,13 @@
  *.catch(err => console.log(err))
  */
 
-function delay(ms, value) {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => resolve(value), ms)
-	})
-}
-
-Promise.race([delay(10, 'tom'), delay(20, 'jack')])
-.then(result => console.log('results', result))
+/*
+ *function delay(ms, value) {
+ *    return new Promise((resolve, reject) => {
+ *        setTimeout(() => resolve(value), ms)
+ *    })
+ *}
+ *
+ *Promise.race([delay(10, 'tom'), delay(20, 'jack')])
+ *.then(result => console.log('results', result))
+ */

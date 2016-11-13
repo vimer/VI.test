@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "co-fs": "^1.2.0",
+    "fs": "0.0.1-security",
     "node-cron": "^1.1.2"
   }
 }

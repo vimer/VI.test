@@ -12,22 +12,32 @@
 
 //foo(1).then(v => console.log('foo(1)', v));
 
+async function get() {
+	return 1;
+}
+async function foo() {
+	var v = await get();
+	console.log(v)
+}
+foo()
+//foo().then(v => console.log(v));
+
 
 //读文件
-var co = require('co');
-var fs = require("fs");
-var mzfs = require('mz/fs');
-var co_fs = require('co-fs');
-const promisefy = (nodefn) => (...args) =>
-	new Promise((resolve, reject) => {
-	nodefn(...args, function(err, res) {
-		if (err) {
-			return reject(err)
-		}
-		resolve(res)
-	})
-})
-var readFile = promisefy(fs.readFile);
+//var co = require('co');
+//var fs = require("fs");
+//var mzfs = require('mz/fs');
+//var co_fs = require('co-fs');
+//const promisefy = (nodefn) => (...args) =>
+	//new Promise((resolve, reject) => {
+	//nodefn(...args, function(err, res) {
+		//if (err) {
+			//return reject(err)
+		//}
+		//resolve(res)
+	//})
+//})
+//var readFile = promisefy(fs.readFile);
 /*
  *co(function* gen() {
  *    var v = yield co_fs.readFile('./async.js', 'utf8');
@@ -35,9 +45,9 @@ var readFile = promisefy(fs.readFile);
  *});
  */
 
-async function foo() {
-	const v = await readFile('./async.js', 'utf8');
-	//return v;
-}
+//async function foo() {
+	//const v = await readFile('./async.js', 'utf8');
+	////return v;
+//}
 //foo().then(v => console.log(v))
 

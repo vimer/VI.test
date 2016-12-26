@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "co": "^4.6.0",
     "co-fs": "^1.2.0",
+    "cron": "^1.1.1",
     "fs": "0.0.1-security",
     "m3u8": "0.0.7",
     "mz": "^2.5.0",
